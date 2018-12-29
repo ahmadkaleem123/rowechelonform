@@ -20,7 +20,7 @@ for i = 1:m-1
             temp = A(j,:);
             temp2 = A(i,:);
             A(i,:) = temp;
-            A(j,:) = temp2;                  %% Finish it
+            A(j,:) = temp2;                  
         end
     end
 end
