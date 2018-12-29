@@ -7,10 +7,10 @@ r = m;
 for j = 1:m-1
     x = A(j,j);
     if x ~=0
-        A(j,:) = A(j,:)./x;                                       %% Add stuff to make the last row zero and reduce it into lowest terms etc. and delete one of the rows which is the same
+        A(j,:) = A(j,:)./x;                                     
     end
     for i = j+1:m
-        y = A(i,j);                                                %% mod(x,1) ~=0
+        y = A(i,j);                                               
         A(i,:) = A(i,:) - (y*A(j,:));
     end
 end
@@ -20,7 +20,7 @@ for i = 1:m-1
             temp = A(j,:);
             temp2 = A(i,:);
             A(i,:) = temp;
-            A(j,:) = temp2;
+            A(j,:) = temp2;                  %% Finish it
         end
     end
 end
@@ -47,7 +47,7 @@ for i = 1:m
 end
 for i = 1:m-1
     for j = i+1:m
-        d = A(i,:) - A(j,:)
+        d = A(i,:) - A(j,:);
         if((isequal(d,c)==1))
             A(j,:) = c;
         end
